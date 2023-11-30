@@ -132,7 +132,7 @@ public static void main(String[] args) throws TimeoutException, StreamingQueryEx
                 .writeStream()
                 .outputMode("complete")
                 .format("console")
-                .trigger(Trigger.ProcessingTime("1 minute"))
+                .trigger(Trigger.ProcessingTime("10 seconds"))
                 .start();
 
         // Tâche 2 : Afficher les deux années avec le plus grand nombre d'incidents de manière continue
